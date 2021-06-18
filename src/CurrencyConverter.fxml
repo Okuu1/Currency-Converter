@@ -12,7 +12,7 @@
         <Text layoutX="316.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To:" />
         <ComboBox fx:id="comboConvertFrom" layoutX="129.0" layoutY="25.0" prefWidth="150.0" />
         <ComboBox fx:id="comboConvertTo" layoutX="366.0" layoutY="25.0" prefWidth="150.0" />
-        <TextField fx:id="textfieldAmountToConvert" layoutX="130.0" layoutY="76.0" />
+        <TextField fx:id="textFieldAmountToConvert" layoutX="130.0" layoutY="76.0" />
         <Text layoutX="13.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount to convert:" />
         <Button id="buttonConvert" layoutX="179.0" layoutY="122.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="198.0" text="Convert" onAction="#handleConvertButtonAction" />
         <Text fx:id="textConvertedAmount" layoutX="363.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type in an amount to convert" />
