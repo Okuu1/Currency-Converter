@@ -32,6 +32,7 @@ public class CurrencyAPI
             InputStream stream
                     = (InputStream) connection.getContent();
             Scanner scanner = new Scanner(stream);
+            // regex parse for currency codes
             Pattern pattern = Pattern.compile("[a-zA-Z]{3}");
 
             while (scanner.hasNext())
@@ -51,8 +52,8 @@ public class CurrencyAPI
      * Gets the currency ratio of currencyFrom to currencyTo through an external API
      * @param currencyFrom The 3 letter ISO 4217 code for the currency from which to convert
      * @param currencyTo The 3 letter ISO 4217 code for the currency to which to convert
-     * @return If the API call succeeds, returns currency ratio of currencyTo to 1 unit of currencyFrom.
-     * Returns -1 if the API call receives any code other than 200
+     * @return If the API call succeeds, returns currency ratio of currencyTo to 1 unit
+     * of currencyFrom. Returns -1 if the API call receives any code other than 200
      * @throws IOException Should never happen as the checks are made within the method
      */
     public static double getExchangeRatio(String currencyFrom, String currencyTo) throws IOException
@@ -87,6 +88,7 @@ public class CurrencyAPI
                     .getAsDouble();
 
         }
+        // if the endpoint is not available and the above statement is not executed, return -1
         return -1;
     }
 }

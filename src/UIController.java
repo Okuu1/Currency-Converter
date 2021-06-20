@@ -27,7 +27,7 @@ public class UIController
         textConvertedAmount.setText("Please select a currency to convert \n" +
                 "from and a currency to convert to");
 
-        // restrict textField to integers only, and to a max length of 9
+        // restrict textField to numbers only, and to a max length of 9
         UnaryOperator<TextFormatter.Change> filter = change -> {
             String text = change.getText();
             int newLength = change.getControlNewText().length();
